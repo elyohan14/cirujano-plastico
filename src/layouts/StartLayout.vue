@@ -7,27 +7,6 @@
       fit="cover"
     ></q-img>
     <LogoName />
-    <!-- <div
-      class="row"
-      style="text-align: center;"
-    >
-      <div class="col-12">
-        <img
-          alt="Quasar logo"
-          src="~assets/logo.svg"
-          style="width: 60px; height: 60px"
-        >
-      </div>
-      <div class="col-12">
-        <img
-          class="q-pa-xs col-12"
-          alt="Quasar logo"
-          src="~assets/name.svg"
-          style="width: 160px; height: 35px"
-        >
-      </div>
-
-    </div> -->
     <div>
       <q-btn
         class="full-width"
@@ -35,6 +14,7 @@
         label="Agenda Preconsulta"
         push
         no-caps
+        to="/service_types"
       />
       <q-btn
         class="full-width q-mt-xs"
@@ -43,6 +23,7 @@
         label="Iniciar Sesión"
         push
         no-caps
+        to="/login"
       />
     </div>
 
