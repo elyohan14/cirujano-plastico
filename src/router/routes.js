@@ -9,6 +9,10 @@ const routes = [
     component: () => import('layouts/services/IndexServiceTypes.vue')
   },
   {
+    path: '/services/:type',
+    component: () => import('layouts/services/IndexServices.vue')
+  },
+  {
     path: '/login',
     component: () => import('layouts/LoginLayout.vue')
   },
