@@ -94,67 +94,67 @@ export const useServiceTypesStore = defineStore('servicetypes', {
         label: 'Procedimientos Faciales',
         services: [
           {
-            value: 1,
+            value: 17,
             label: 'Blefaroplastia',
             image: 'procedimientos_faciales/Rectangle 187.png'
           },
           {
-            value: 2,
+            value: 18,
             label: 'Cirugía de mentón',
             image: 'procedimientos_faciales/Rectangle 189.png'
           },
           {
-            value: 3,
+            value: 19,
             label: 'Dermoabrasión',
             image: 'procedimientos_faciales/Rectangle 191.png'
           },
           {
-            value: 4,
+            value: 20,
             label: 'Exfoliación química',
             image: 'procedimientos_faciales/Rectangle 193.png'
           },
           {
-            value: 5,
+            value: 21,
             label: 'Implantes faciales',
             image: 'procedimientos_faciales/Rectangle 195.png'
           },
           {
-            value: 6,
+            value: 22,
             label: 'Toxina botulínica',
             image: 'procedimientos_faciales/Rectangle 197.png'
           },
           {
-            value: 7,
+            value: 23,
             label: 'Eliminación de grasa bucal',
             image: 'procedimientos_faciales/Rectangle 199.png'
           },
           {
-            value: 8,
+            value: 24,
             label: 'Otoplastia',
             image: 'procedimientos_faciales/Rectangle 201.png'
           },
           {
-            value: 9,
+            value: 25,
             label: 'Procedimiento de cuidado de la piel',
             image: 'procedimientos_faciales/Rectangle 203.png'
           },
           {
-            value: 10,
+            value: 26,
             label: 'Rejuvenecimiento de la piel',
             image: 'procedimientos_faciales/Rectangle 205.png'
           },
           {
-            value: 11,
+            value: 27,
             label: 'Rinoplastia',
             image: 'procedimientos_faciales/Rectangle 207.png'
           },
           {
-            value: 12,
+            value: 28,
             label: 'Ritidectomía',
             image: 'procedimientos_faciales/Rectangle 209.png'
           },
           {
-            value: 13,
+            value: 29,
             label: 'Rellenos dérmicos',
             image: 'procedimientos_faciales/Rectangle 211.png'
           }
@@ -165,22 +165,22 @@ export const useServiceTypesStore = defineStore('servicetypes', {
         label: 'Procedimientos de Busto',
         services: [
           {
-            value: 10,
+            value: 30,
             label: 'Aumento de senos',
             image: 'procedimientos_de_busto/Rectangle 187.png'
           },
           {
-            value: 11,
+            value: 31,
             label: 'Revisión de implantes mamarios',
             image: 'procedimientos_de_busto/Rectangle 189.png'
           },
           {
-            value: 12,
+            value: 32,
             label: 'Mastopexia',
             image: 'procedimientos_de_busto/Rectangle 191.png'
           },
           {
-            value: 13,
+            value: 33,
             label: 'Mamoplastia de reducción',
             image: 'procedimientos_de_busto/Rectangle 193.png'
           }
@@ -191,27 +191,27 @@ export const useServiceTypesStore = defineStore('servicetypes', {
         label: 'Liftings',
         services: [
           {
-            value: 10,
+            value: 34,
             label: 'Lifting de cejas',
             image: 'liftings/Rectangle 187.png'
           },
           {
-            value: 11,
+            value: 35,
             label: 'Lifting de muslos',
             image: 'liftings/Rectangle 189.png'
           },
           {
-            value: 12,
+            value: 36,
             label: 'Lifting de cuello',
             image: 'liftings/Rectangle 191.png'
           },
           {
-            value: 13,
+            value: 37,
             label: 'Lifting corporal',
             image: 'liftings/Rectangle 193.png'
           },
           {
-            value: 14,
+            value: 38,
             label: 'Lifting de brazos',
             image: 'liftings/Rectangle 195.png'
           }

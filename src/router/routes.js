@@ -13,6 +13,14 @@ const routes = [
     component: () => import('layouts/services/IndexServices.vue')
   },
   {
+    path: '/services/:id/detail',
+    component: () => import('layouts/services/ServiceDetail.vue')
+  },
+  {
+    path: '/personal_information',
+    component: () => import('layouts/PersonalInformation.vue')
+  },
+  {
     path: '/login',
     component: () => import('layouts/LoginLayout.vue')
   },

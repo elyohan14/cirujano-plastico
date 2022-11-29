@@ -14,6 +14,7 @@
         clickable
         v-ripple
         class="row back"
+        @click="goToDetails(item.value)"
       >
         <div class="col-3 q-ma-none">
           <q-img :src="getImageUrl(item.image)"></q-img>
@@ -32,13 +33,14 @@
   </q-layout>
 </template>
 <script setup>
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { useServiceTypesStore } from 'stores/servicetypes-store'
 
 const serviceTypesStore = useServiceTypesStore()
 // Data
 
 const route = useRoute()
+const router = useRouter()
 const serviceTypes = serviceTypesStore.types
 const type = route.params.type
 const typeRecord = serviceTypes.find(val => val.value === +type)
@@ -48,6 +50,10 @@ const services = typeRecord.services
 // Methods
 const getImageUrl = (path) => {
   return new URL(`../../assets/${path}`, import.meta.url).href
+}
+
+const goToDetails = (id) => {
+  router.push(`/services/${id}/detail`)
 }
 
 </script>
