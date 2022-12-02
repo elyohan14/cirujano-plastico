@@ -1,11 +1,6 @@
 <template>
   <q-layout class="flex flex-center">
-    <q-img
-      class="full-width"
-      src="~assets/andresrivera-bg2 1.svg"
-      style="max-width: 360px; margin-top: -13px;"
-      fit="cover"
-    ></q-img>
+    <CoverDoctor />
     <LogoName />
     <div>
       <q-btn
@@ -32,4 +27,5 @@
 </template>
 <script setup>
 import LogoName from 'components/LogoName.vue'
+import CoverDoctor from 'components/CoverDoctor.vue'
 </script>

@@ -2,13 +2,13 @@
   <q-layout class="q-pa-md">
     <LogoName class="q-pt-xl" />
 
-    <div class="text-h6 flex flex-center q-pt-lg grey">Nuestros Procedimientos</div>
+    <div class="text-h6 flex flex-center q-pt-lg title-grey">Nuestros Procedimientos</div>
     <q-separator
       color="black"
       inset
     />
 
-    <p class="q-pt-xl grey text-center">Contamos con un amplio portafolio de procedimientos estéticos realizados con las mejores tecnologías para garantizar a nuestros pacientes resultados satisfactorios y profesionales</p>
+    <p class="q-pt-xl title-grey text-center">Contamos con un amplio portafolio de procedimientos estéticos realizados con las mejores tecnologías para garantizar a nuestros pacientes resultados satisfactorios y profesionales</p>
 
     <div
       class="q-mb-md"
@@ -48,8 +48,3 @@ onMounted(() => {
 })
 
 </script>
-<style>
-.grey {
-  color: #717171;
-}
-</style>

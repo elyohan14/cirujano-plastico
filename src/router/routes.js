@@ -29,6 +29,10 @@ const routes = [
     component: () => import('layouts/LoginLayout.vue')
   },
   {
+    path: '/recover_password',
+    component: () => import('layouts/RecoverPassword.vue')
+  },
+  {
     path: '/menu',
     component: () => import('layouts/MainLayout.vue'),
     children: [

@@ -1,9 +1,9 @@
 <template>
   <q-layout>
-    <div class="text-h6 flex flex-center q-pt-lg grey">Datos generales</div>
+    <div class="text-h6 flex flex-center q-pt-lg title-grey">Datos generales</div>
     <div class="q-pa-lg">
       <div class="q-pa-xs">
-        <label class="grey">Nombre completo</label>
+        <label class="title-grey">Nombre completo</label>
         <q-input
           v-model="form.fullname"
           outlined
@@ -14,7 +14,7 @@
         />
       </div>
       <div class="q-pa-xs row">
-        <label class="col-12 grey">Documento de identidad</label>
+        <label class="col-12 title-grey">Documento de identidad</label>
         <q-select
           class="col-2"
           v-model="identity"
@@ -33,7 +33,7 @@
         />
       </div>
       <div class="q-pa-xs">
-        <label class="grey">Teléfono</label>
+        <label class="title-grey">Teléfono</label>
         <q-input
           v-model="form.phone"
           outlined
@@ -44,7 +44,7 @@
         />
       </div>
       <div class="q-pa-xs">
-        <label class="grey">Correo electrónico</label>
+        <label class="title-grey">Correo electrónico</label>
         <q-input
           v-model="form.email"
           outlined
@@ -55,7 +55,7 @@
         />
       </div>
       <div class="q-pa-xs">
-        <label class="grey">Ciudad</label>
+        <label class="title-grey">Ciudad</label>
         <q-input
           v-model="form.city"
           outlined
@@ -66,7 +66,7 @@
         />
       </div>
       <div class="q-pa-xs">
-        <label class="grey">Edad</label>
+        <label class="title-grey">Edad</label>
         <q-input
           v-model="form.age"
           outlined
@@ -77,7 +77,7 @@
         />
       </div>
       <div class="q-pa-xs">
-        <label class="grey">Género</label>
+        <label class="title-grey">Género</label>
         <q-select
           v-model="form.gender"
           outlined
@@ -173,9 +173,6 @@ const submit = async () => {
 }
 </script>
 <style>
-.grey {
-  color: #717171;
-}
 .q-field--outlined .q-field__control {
   border-radius: 10px;
 }
