@@ -1,18 +1,18 @@
 <template>
   <q-layout>
     <div class="q-mt-lg">
-      <q-img src="https://cdn.quasar.dev/img/parallax2.jpg">
+      <q-img :src="`${url}file/${service.image}`">
         <div
           class="q-pb-md absolute-bottom text-subtitle1 text-left text-bold"
-          style="font-size: 40px; background: none; line-height: 2rem;"
+          style="font-size: 40px; background: rgb(0 0 0 / 19%); line-height: 2rem;"
         >
-          Nombre del Servicio
+          {{ service.name }}
         </div>
       </q-img>
     </div>
     <div class="q-mt-lg">
       <p class="q-pa-md text-grey">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac, fames mattis accumsan nisi, ut lorem tortor diam. Tempus vestibulum elit metus, a pharetra phasellus ac. Rhoncus metus feugiat tellus adipiscing nunc velit ornare. Dis est ut molestie eros, faucibus sagittis est. Cursus cursus et vestibulum sit id neque nibh a quis. Bibendum semper at tincidunt ligula sed dictumst elit amet. Rhoncus metus feugiat tellus adipiscing nunc velit ornare. Dis est ut molestie eros, faucibus sagittis est. Cursus cursus et vestibulum sit id neque nibh a quis. Bibendum semper at tincidunt ligula sed dictumst elit amet.
+        {{ service.description }}
       </p>
     </div>
 
@@ -29,3 +29,28 @@
 
   </q-layout>
 </template>
+<script setup>
+import { useServiceTypesStore } from 'stores/servicetypes-store'
+import { computed, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+
+// Store
+
+const serviceTypesStore = useServiceTypesStore()
+
+// Data
+
+const route = useRoute()
+const id = route.params.id
+const url = process.env.BASEURL
+
+// Computed
+const service = computed(() => {
+  return serviceTypesStore.service
+})
+
+// Mounted
+onMounted(() => {
+  serviceTypesStore.getService(id)
+})
+</script>

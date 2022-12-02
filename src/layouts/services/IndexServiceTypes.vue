@@ -17,10 +17,10 @@
     >
       <q-btn
         class="full-width"
-        :label="item.label"
+        :label="item.name"
         color="rose"
         text-color="primary"
-        :to="`services/${item.value}`"
+        :to="`services/${item.id}`"
         no-caps
         push
       />
@@ -31,12 +31,22 @@
 <script setup>
 import LogoName from 'components/LogoName.vue'
 import { useServiceTypesStore } from 'stores/servicetypes-store'
+import { onMounted, computed } from 'vue'
 
 const serviceTypesStore = useServiceTypesStore()
 
 // Data
 
-const buttons = serviceTypesStore.types
+// Computed
+const buttons = computed(() => {
+  return serviceTypesStore.types
+})
+
+// Mounted
+onMounted(() => {
+  serviceTypesStore.getServiceTypes()
+})
+
 </script>
 <style>
 .grey {
