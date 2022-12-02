@@ -21,6 +21,10 @@ const routes = [
     component: () => import('layouts/PersonalInformation.vue')
   },
   {
+    path: '/payment_process',
+    component: () => import('layouts/payment/PaymentProcess.vue')
+  },
+  {
     path: '/login',
     component: () => import('layouts/LoginLayout.vue')
   },
