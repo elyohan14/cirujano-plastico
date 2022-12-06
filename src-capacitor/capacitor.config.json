@@ -1,0 +1,7 @@
+{
+  "appId": "onex.media.andresrivera",
+  "appName": "Dr. Andres Rivera",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "www"
+}

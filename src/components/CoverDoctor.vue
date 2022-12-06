@@ -2,7 +2,7 @@
 
   <q-img
     class="full-width"
-    src="~assets/andresrivera-bg2 1.svg"
+    src="~assets/andresrivera.svg"
     style="max-width: 360px; margin-top: -13px;"
     fit="cover"
   ></q-img>

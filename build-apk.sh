@@ -1,0 +1,1 @@
+rm AndresRivera.apk && quasar build -m capacitor -T android && zipalign -v 4 ./dist/capacitor/android/apk/release/app-release-unsigned.apk AndresRivera.apk && apksigner sign --ks my-release-key.keystore --ks-key-alias alias_name AndresRivera.apk
