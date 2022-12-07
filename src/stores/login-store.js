@@ -27,6 +27,24 @@ export const useLoginStore = defineStore('counter', {
           })
         }
       }
+    },
+    async recoverPassword (form) {
+      try {
+        const { data } = await api.post('/recover-password', form)
+        console.log(data)
+        Dialog.create({
+          title: 'Exito',
+          message: 'Se ha enviado un correo con las instrucciones para recuperar su contraseña'
+        }).onOk(() => {
+          this.router.push('/login')
+        })
+      } catch (error) {
+        console.log({ error })
+        Dialog.create({
+          title: 'Error',
+          message: error.response.data.message
+        })
+      }
     }
   }
 })

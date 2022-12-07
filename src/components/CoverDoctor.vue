@@ -3,7 +3,7 @@
   <q-img
     class="full-width"
     src="~assets/andresrivera.svg"
-    style="max-width: 360px; margin-top: -13px;"
+    style="max-width: 100%; margin-top: -13px;"
     fit="cover"
   ></q-img>
 
