@@ -24,11 +24,11 @@
         />
         <q-input
           class="col-10"
-          v-model="form.identityNumber"
+          v-model="form.identity_number"
           outlined
           dense
-          @blur="v$.identityNumber.$touch"
-          :error="v$.identityNumber.$error"
+          @blur="v$.identity_number.$touch"
+          :error="v$.identity_number.$error"
           error-message="Campo obligatorio"
         />
       </div>
@@ -135,7 +135,7 @@ const genders = reactive([
 
 const form = reactive({
   fullname: '',
-  identityNumber: '',
+  identity_number: '',
   phone: '',
   email: '',
   city: '',
@@ -145,7 +145,7 @@ const form = reactive({
 
 const formRules = {
   fullname: { required, minLength: minLength(4), maxLength: maxLength(50) },
-  identityNumber: { required, numeric },
+  identity_number: { required, numeric },
   phone: { required, numeric, minLength: minLength(7), maxLength: maxLength(14) },
   email: { required, email },
   city: { required, minLength: minLength(2), maxLength: maxLength(50) },

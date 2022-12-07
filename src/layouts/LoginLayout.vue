@@ -13,7 +13,7 @@
         <div class="q-pb-md">
           <label class="text-black q-ml-sm">Cédula</label>
           <q-input
-            v-model="form.identificationNumber"
+            v-model="form.identity_number"
             placeholder="123456789101112"
             outlined
             dense
@@ -70,17 +70,22 @@ import { useQuasar } from 'quasar'
 import { useVuelidate } from '@vuelidate/core'
 import { required, numeric } from '@vuelidate/validators'
 import { useRouter } from 'vue-router'
+import { useLoginStore } from 'stores/login-store'
+
+// Store
+
+const loginStore = useLoginStore()
 
 // Data
 
 const $q = useQuasar()
 const router = useRouter()
 const form = reactive({
-  identificationNumber: $q.localStorage.getItem('identificationNumber') || '', //
+  identity_number: $q.localStorage.getItem('identity_number') || '', //
   password: ''
 })
 const formRules = {
-  identificationNumber: { required, numeric },
+  identity_number: { required, numeric },
   password: { required }
 }
 const v$ = useVuelidate(formRules, form)
@@ -99,7 +104,10 @@ const submit = async () => {
     return
   }
 
-  $q.localStorage.set('identificationNumber', form.identificationNumber)
-  router.replace('menu')
+  loginStore.login(form)
+
+  if (remember.value) {
+    $q.localStorage.set('identity_number', form.identity_number)
+  }
 }
 </script>
